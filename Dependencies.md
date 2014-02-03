@@ -1,7 +1,7 @@
 Dependencies
 ------------
 
-[https://github.com/the-xkcd-community/the-red-spider-project]
+https://github.com/the-xkcd-community/the-red-spider-project
 
 
 Required for the setup script, `rsshell` and several commands:

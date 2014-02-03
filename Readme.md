@@ -1,7 +1,7 @@
 The Red Spider Project
 ----------------------
 
-[https://github.com/the-xkcd-community/the-red-spider-project]
+https://github.com/the-xkcd-community/the-red-spider-project
 
 
 ### Why ###
