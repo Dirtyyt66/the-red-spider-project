@@ -304,23 +304,32 @@ programs rely on.
 In addition the root has been saved to RED_SPIDER_ROOT, so after your
 next logon that one will be permanently available as well.
 
-Note for unixy systems: opening a new terminal window might count as a
-new logon. If you run me often, you may want to clean up ~/.profile
-once in a while..."""
+Note for unixy systems: if you run me often, you may want to clean up
+~/.profile once in a while..."""
 
 install_patience_msg = """
 Please wait while I install the rest..."""
 
 script_not_found_msg = """I can't find {0} so I'll skip it."""
 
+if os.name == 'nt':  # Windows
+    usr_env_reload_cmd = 'for /f "tokens=3* skip=2" %i in (\'reg query "HKCU\Environment" /v RED_SPIDER_ROOT\') do (set RED_SPIDER_ROOT=%i)'
+else:                # POSIX
+    usr_env_reload_cmd = 'source ~/.profile'
+
 farewell_msg = """
-We're done! But wait, don't walk away yet.
+We're done! Now all you need to do is run these commands:
+
+  {0}
+  rsshell
+
+But wait, don't walk away yet.
 This is important: if you ever decide to move the Red Spider Project
 to another directory, you'll have to run me again or otherwise my dear
 friend rsshell might choke and call you an inconsiderate boor.
 Just kidding! But seriously, do come back to me if you ever move the
 project to somewhere else.
-"""
+""".format(usr_env_reload_cmd)
 
 if __name__ == '__main__':
     main()
