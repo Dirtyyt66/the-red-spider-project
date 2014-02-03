@@ -1,19 +1,20 @@
 #! /usr/bin/env python2
-from __future__ import print_function
 
 ''' setup.py
 Initial setup script for the Red Spider Project
 
-Copyright 2012, 2013 Julian Gonggrijp
+Copyright 2012-2014 Julian Gonggrijp
+Copyright 2013 Christoph Baumgartner
 Licensed under the Red Spider Project License.
 See the License.txt that shipped with your copy of this software for details.
 
 
-A -q option to make it less verbous would probably be nice. Until we
+A -q option to make it less verbose would probably be nice. Until we
 have a dedicated 'update' command we'll need to run the setup every
 time one of the commands has been changed on master.
 '''
 
+from __future__ import print_function
 from future_builtins import zip, map
 import os
 from os.path import exists, join, split, splitext, abspath, expanduser
@@ -58,7 +59,7 @@ class SomeChoice:
             return self
 
 YES = SomeChoice(
-    "y", "ye", "yes", "aye", "affirmative", "roger", "okay", "kay", 
+    "y", "ye", "yes", "aye", "affirmative", "roger", "okay", "kay",
     "sure", "fine", "all right", "certainly", "definitely"
     )
 NO = SomeChoice(
