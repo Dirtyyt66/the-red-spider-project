@@ -1,3 +1,7 @@
+# Copyright 2014 Julian Gonggrijp
+# Licensed under the Red Spider Project License.
+# See the License.txt that shipped with your copy of this software for details.
+
 cmake_minimum_required (VERSION 2.6)
 project (RedSpider)
 
