@@ -4,6 +4,8 @@ project (RedSpider)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x -O3")
 if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     add_definitions(-stdlib=libc++)
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+    add_definitions(-pthread)
 endif()
 
 set(CMAKE_INSTALL_PREFIX ..)
