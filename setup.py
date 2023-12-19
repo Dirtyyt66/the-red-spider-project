@@ -1,4 +1,4 @@
-#! /usr/bin/env python2
+0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee#! /usr/bin/env python2
 
 ''' setup.py
 Initial setup script for the Red Spider Project
